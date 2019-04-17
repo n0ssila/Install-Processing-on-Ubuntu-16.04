@@ -1,26 +1,26 @@
 #!/bin/bash          
-          echo This script will install Processing-3.1.2-linux64 on Ubuntu 16.04.
+          echo This script will install Processing-3.5.3-linux64 on Ubuntu 16.04.
 
 
 #create folder 
 mkdir /opt/Processing
 
 #unzip the tarball
-tar -xvzf processing-3.1.2-linux64.tgz -C /opt/Processing
+tar -xvzf processing-3.5.3-linux64.tgz -C /opt/Processing
 
 #rename the folder 
-mv /opt/Processing/processing-3.1.2 /opt/Processing/3.1.2
+mv /opt/Processing/processing-3.5.3 /opt/Processing/3.1.2
 
 #create a desktop icon for Processing 
-ln -s /opt/Processing/3.1.2/processing /usr/local/bin/processing
+ln -s /opt/Processing/3.5.3/processing /usr/local/bin/processing
 
 #create a launcher file and input contents 
 echo '[Desktop Entry]
-Version=3.1.2
+Version=3.5.3
 Name=Processing
 Comment=Processing :) 
 Exec=processing %F
-Icon=/opt/Processing/3.1.2/lib/icons/pde-256.png
+Icon=/opt/Processing/3.5.3/lib/icons/pde-256.png
 Terminal=false
 Type=Application
 Categories=AudioVideo;Video;Graphics;' >  /usr/share/applications/processing.desktop
